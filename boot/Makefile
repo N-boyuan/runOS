@@ -2,7 +2,7 @@ QEMU=qemu-system-x86_64
 BOOT=boot.bin
 NS=nasm
 BIN_FILES=$(subst .asm,.bin,$(wildcard *.asm))
-.PHONY: clear run
+.PHONY: clean run
 
 all:$(BIN_FILES)
 
@@ -12,5 +12,5 @@ all:$(BIN_FILES)
 run:
 	$(QEMU) -hda $(BOOT)
 
-clear:
+clean:
 	rm $(BIN_FILES)
