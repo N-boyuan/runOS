@@ -6,9 +6,9 @@ The BIOS in modern PCs initializes and tests the system hardware components (Pow
 
 Because CPU is in protected mode(16 bits) and qemu uses the legacy BIOS(UEFI BIOS have firmware to set CPU to real mode), our bootloader should be set to 16 bits using assembly instruction "bits 16".<br/><br/>
 
-For now, we build a very simple bootloader which is only able to display "Hello, runOS". The bootloader is loacted on the harddisk's MBR(.bin file follows qemu option -hda).
+The bootloader is loacted on the harddisk's MBR(.bin file follows qemu option -hda).
 
 # use
-cd ./boot/
-compile: make
-run: make run
+cd ./boot/<br/>
+compile: make<br/>
+run: make run<br/>
